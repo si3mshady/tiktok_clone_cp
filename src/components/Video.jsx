@@ -2,7 +2,7 @@ import React, {useState,useRef} from 'react'
 import "../Video.css"
 import VideoFooter from '../components/VideoFooter'
 import VideoSidebar from '../components/VideoSidebar'
-import vid1 from '../video/waterfall.mp4'
+
 
 // https://raw.githubusercontent.com/codedamn-classrooms/tiktok-react-material/main/data.json
 // https://youtu.be/g8yGxDMyGiE?t=2518
