@@ -7,8 +7,8 @@ import vid1 from '../video/waterfall.mp4'
 // https://raw.githubusercontent.com/codedamn-classrooms/tiktok-react-material/main/data.json
 // https://youtu.be/g8yGxDMyGiE?t=2518
 
-const url = "https://github.com/codedamn-classrooms/tiktok-react-material/raw/main/v1.mp4"
-export default function Video() {
+
+export default function Video({url, song, channel,description,likes, shares, messages}) {
     const [playing,setPlaying] = useState(false)
     const videoRef = useRef(null);
     const handleVideoClick = () => {
@@ -28,9 +28,13 @@ export default function Video() {
             <video className="video__player"
             onClick={handleVideoClick}
             ref={videoRef}
-             src={url} muted   loop/>
-            <VideoFooter /> 
-            <VideoSidebar likes={888} shares={73} messages={124}  />
+             src={url} muted  controls loop/>
+            <VideoFooter 
+                channel={channel}
+                description={description}
+                song={song}
+            /> 
+            <VideoSidebar likes={likes} shares={shares} messages={messages}  />
         </div>
 
         
