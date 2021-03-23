@@ -28,9 +28,9 @@ export default function Video() {
             <video className="video__player"
             onClick={handleVideoClick}
             ref={videoRef}
-             src={url} muted controls  loop/>
-            {/* video footer  */}
-            {/* video sidebar */}
+             src={url} muted   loop/>
+            <VideoFooter /> 
+            <VideoSidebar likes={888} shares={73} messages={124}  />
         </div>
 
         
