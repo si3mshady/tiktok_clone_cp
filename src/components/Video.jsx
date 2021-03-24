@@ -3,11 +3,6 @@ import "../Video.css"
 import VideoFooter from '../components/VideoFooter'
 import VideoSidebar from '../components/VideoSidebar'
 
-
-// https://raw.githubusercontent.com/codedamn-classrooms/tiktok-react-material/main/data.json
-// https://youtu.be/g8yGxDMyGiE?t=2518
-
-
 export default function Video({url, song, channel,description,likes, shares, messages}) {
     const [playing,setPlaying] = useState(false)
     const videoRef = useRef(null);

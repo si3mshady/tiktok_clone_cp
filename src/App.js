@@ -4,12 +4,9 @@ import Video from './components/Video';
 import './App.css';
 import axiosDefault from './Axios'
  
-
-
 function App() {
 
 const [videos, setVideos] = useState([]);
-
 
 useEffect(()=> {
     async function fetchPosts() {
