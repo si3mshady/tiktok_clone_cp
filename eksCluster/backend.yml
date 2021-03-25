@@ -33,4 +33,4 @@ spec:
       # nodePort: 30300
   selector: 
     si3mshady: node
-  # type: NodePort
+  type: LoadBalancer
