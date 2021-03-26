@@ -6,7 +6,7 @@ spec:
   replicas: 1
   selector:
     matchLabels:
-      # manage pods with the label app: si3mshady/strayaway
+      # manage pods with the label app: si3mshady/db
       si3mshady: db
     
   template:
@@ -14,12 +14,20 @@ spec:
       labels:        
         si3mshady: db
     spec:
+      volumes: 
+      - name: tiktok-volume-mount
+        persistentVolumeClaim:
+          claimName: tiktok-pvc
+
       containers:
       - name: db
         image:  mongo:latest
         ports:
         - containerPort: 27017
-          hostPort: 27017        
+          hostPort: 27017
+        volumeMounts:
+        - name: tiktok-volume-mount    
+          mountPath: /data/db
 --- 
 apiVersion: v1
 kind: Service
